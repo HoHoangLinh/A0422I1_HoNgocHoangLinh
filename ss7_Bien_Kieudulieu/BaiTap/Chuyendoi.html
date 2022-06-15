@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table border="0">
+        <tr>
+            <th>Amount</th>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="text" value="1">
+            </td>
+
+            <td id="form">
+                <select>
+                    <option id="vn">VietNam</option>
+                    <option id="usd">USD</option>
+                </select>
+            </td>
+
+            <td id="to">
+                <select>
+                    <option id="us">USD</option>
+                    <option id="vnd">VietNam</option>
+                </select>
+            </td>
+
+            <td>
+                <input type="button" value="Convert" onclick="Convert()">
+            </td>
+        </tr>
+    </table>
+</form>
+<div id="result"></div>
+
+<script>
+    function Convert() {
+        if (vn === us) {
+            document.getElementById('result').innerHTML = text / 23000
+        } else if (usd === vnd) {
+            document.getElementById('result').innerHTML = text * 23000
+        } else {
+            document.getElementById('result').innerHTML = error
+
+        }
+    }
+</script>
+</body>
+</html>
