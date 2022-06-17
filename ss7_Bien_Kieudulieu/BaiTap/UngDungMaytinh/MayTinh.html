@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table border="0">
+        <tr>
+            <td>
+                <input type="text" value="6" id="A">
+                <input type="text" value="2" id="B">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" value="+" onclick="Cong()">
+                <input type="button" value="-" onclick="Tru()">
+                <input type="button" value="x" onclick="Nhan()">
+                <input type="button" value="/" onclick="Chia()">
+            </td>
+        </tr>
+    </table>
+</form>
+<p><span id="kq"></span></p>
+
+<script>
+    let A = document.getElementById('A').value;
+    let B = document.getElementById('B').value;
+    let result;
+    function Cong() {
+        result = "Kết quả cộng là : " + (parseInt(A) + parseInt(B));
+        document.getElementById('kq').innerHTML = result;
+    }
+
+    function Tru() {
+        result = "Kết quả trừ là : " + (A - B);
+        document.getElementById('kq').innerHTML = result;
+    }
+
+    function Nhan() {
+        result = "Kết quả nhân là : " + (A * B);
+        document.getElementById('kq').innerHTML = result;
+    }
+
+    function Chia() {
+        result = "Kết quả chia là : " + (A / B);
+        document.getElementById('kq').innerHTML = result;
+    }
+</script>
+</body>
+</html>

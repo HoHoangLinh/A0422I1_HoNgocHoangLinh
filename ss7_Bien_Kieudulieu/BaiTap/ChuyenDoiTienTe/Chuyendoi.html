@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <table border="0">
+        <tr>
+            <th>Amount</th>
+            <th>From</th>
+            <th>To</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="Amount" value="23000">
+            </td>
+
+            <td>
+                <select id="FromC">
+                    <option id="VN">vietnam</option>
+                    <option id="US">USD</option>
+                </select>
+            </td>
+
+            <td>
+                <select id="To">
+                    <option id="usd">USD</option>
+                    <option id="vnd">vietnam</option>
+                </select>
+            </td>
+
+            <td>
+                <input type="button" value="Convert" onclick="Convert()">
+            </td>
+        </tr>
+    </table>
+</form>
+<p><span id="kq"></span></p>
+
+<script>
+    function Convert() {
+        let A = document.getElementById('Amount').value;
+        let B = document.getElementById('FromC').value;
+        let C = document.getElementById('To').value;
+        let result;
+        if (B === "vietnam" && C === "USD") {
+            result = "result : " + (A / 23000) + " USD"
+            document.getElementById('kq').innerHTML = result;
+        } else if (B === "USD" && C === "vietnam") {
+            result = "result : " + (A * 23000) + " VND"
+            document.getElementById('kq').innerHTML = result;
+        } else {
+            result = "Khong Hop Le"
+            document.getElementById('kq').innerHTML = result;
+        }
+    }
+</script>
+</body>
+</html>
