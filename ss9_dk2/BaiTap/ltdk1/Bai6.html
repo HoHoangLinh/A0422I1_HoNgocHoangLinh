@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseInt(prompt("Doanh so ban hang`?"))
+    let result;
+    let hoahong;
+    if (a >= 2000000 ) {
+        hoahong = 15;
+        result = a / hoahong
+    } else if (a >= 1000000) {
+        hoahong = 10
+        result = a / hoahong
+    } else if (a >= 500000) {
+        hoahong = 5
+        result = a / hoahong
+    } else {
+        alert("ban kh co tien hoa hong")
+    }
+    alert("Tien hoa hong la : " + result + "\n" + hoahong);
+
+</script>
+</body>
+</html>

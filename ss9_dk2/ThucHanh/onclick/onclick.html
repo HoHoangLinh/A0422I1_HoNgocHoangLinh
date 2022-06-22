@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p><img src="https://thuviendohoa.vn/upload/images/items/hinh-anh-trai-bong-da-png-452.webp" height="200px" id="ball"></p>
+<p><button onclick="ball()">Click me!</button></p>
+
+<script>
+    let a = document.getElementById('ball');
+    function init() {
+        a = document.getElementById('ball');
+        a.style.position = 'relative';
+        a.style.left = "0px"
+    }
+    function ball() {
+        a.style.left = parseInt(a.style.left) + 10 + "px"
+    }
+    window.onload = init;
+</script>
+
+</body>
+</html>

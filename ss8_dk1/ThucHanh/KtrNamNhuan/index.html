@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let month = parseInt(prompt("Nhập tháng để kiểm tra?"))
+    // if (month % 4 == 0) {
+    //     if (month % 100 == 0) {
+    //         if (month % 400 == 0) {
+    //             alert("năm nhuận")
+    //         } else {
+    //             alert("không phải")
+    //         }
+    //     } else {
+    //         alert("năm nhuận")
+    //     }
+    // } else {
+    //     alert("Không phải năm nhuận")
+    // }
+    let namnhuan = false;
+    if (month % 4 == 0 ) {
+        if (month % 100 == 0) {
+            if (month % 400 == 0) {
+                namnhuan = true;
+            }
+        } else {
+            namnhuan = true;
+        }
+    }
+
+    if (namnhuan){
+        alert("năm nhuận")
+    } else {
+        alert("0 phải")
+    }
+</script>
+</body>
+</html>
