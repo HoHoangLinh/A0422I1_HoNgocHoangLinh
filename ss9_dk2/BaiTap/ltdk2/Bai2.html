@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<input type="number" placeholder="met" id="num"
+       oninput="Converter(this.value)"
+       onchange="Converter(this.value)">
+<p id="result"></p>
+<body>
+<script>
+    function Converter(num) {
+        let m = document.getElementById('num').value;
+        let ft =m * 3.2808;
+        document.getElementById('result').innerHTML = ft;
+    }
+</script>
+</body>
+</html>
