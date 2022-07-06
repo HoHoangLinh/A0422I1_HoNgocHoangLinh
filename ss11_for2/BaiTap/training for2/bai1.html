@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let user = +prompt("in bao nhieu so");
+    let a = 0;
+    let b = 1;
+    let result;
+        for (let i = 0 ; i < user ; i++) {
+            result = a + b;
+            b = a;
+            a = result;
+            document.writeln(result)
+        }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = 0;
+    let b = 1;
+    let sum = 0;
+    let count = 1;
+    for (let i = 0 ; i < count ; i++) {
+        sum = a + b;
+        b = a;
+        a = sum;
+        // document.writeln(sum);
+        if (sum % 5 === 0){
+            document.writeln(sum);
+            break;
+        }
+        count++
+    }
+</script>
+</body>
+</html>

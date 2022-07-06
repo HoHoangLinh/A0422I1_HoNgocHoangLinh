@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="Play()">Play!</button>
+<script>
+    function Play() {
+        let min = +prompt("Nhap tu min");
+        let max = +prompt("Nhap tu max");
+        let result = Math.floor(Math.random() * max) + min;
+        for (let i = 0; i < 3; i++) {
+            console.log(result)
+            let user = +prompt("Nhap So trong khoang min den Max");
+            if (user === result) {
+                alert("Chuc mung ban da chien thang")
+                break;
+            } else if (user < result) {
+                alert("Nhap so lon hon!")
+            } else if (user > result) {
+                alert("Nhap so be hon")
+            }
+        }
+    }
+</script>
+</body>
+</html>

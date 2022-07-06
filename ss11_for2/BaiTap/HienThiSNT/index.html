@@ -6,12 +6,21 @@
 </head>
 <body>
 <script>
-    // let number = +prompt("Nhap so nguyen to?")
-    // for (let i = 0 ; i < number ; i++) {
-        if (number % i === 0) {
-            document.write(number)
-        // }
-    }
+   let count = 0;
+   let num = 2;
+   while (count < 20) {
+       let kq = true;
+       for (let i = 2; i < num; i++){
+           if (num % i === 0) {
+               kq = false;
+           }
+       }
+       if (kq) {
+           document.writeln(num)
+           count++
+       }
+       num++
+   }
 </script>
 </body>
 </html>
