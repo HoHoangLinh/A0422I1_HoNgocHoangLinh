@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let user = prompt("input")
+    let en = ["Hello","Bye","Fine"]
+    let vn = ["Chao","Tam biet","On"]
+    let index = 0
+    while (user < index) {
+        if (user === en[index]){
+            alert(vn[index])
+            break;
+        } else if (user === vn[index]){
+            alert(en[index])
+            break;
+        } else {
+            alert("Error!!")
+        }
+        index++
+    }
+</script>
+</body>
+</html>

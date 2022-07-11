@@ -5,16 +5,36 @@
     <title>Title</title>
 </head>
 <body>
+<p id="co"></p>
+<button onclick="Change()">Change Value!</button>
 <script>
-    let user = prompt("input?")
-    let arr1 = ["Hello","Bye"];
-    let arr2 = ["Chao","Tam Biet"];
-    let index = 0
-        if (arr1.indexOf(user !== -1)) {
-            alert(arr1[arr2.indexOf(user)])
-        }else if (arr2.indexOf(user !== -1)){
-            alert(arr2[arr1.indexOf(user)])
+    let a = document.getElementById('co')
+    let board = [];
+    let data = ""
+    for (let i = 0 ; i < 5 ; i++) {
+        board[i] = new Array(0 , 0 ,0 ,0 ,0);
+    }
+    for (let i = 0 ; i < 5 ; i++) {
+        data += "</br>"
+        for (let j = 0 ; j < 5 ; j++){
+            data += board[i][j] + "&nbsp;&nbsp"
         }
+    }
+    a.innerHTML = data
+
+    function Change() {
+        let x = +prompt("X")
+        let y = +prompt("Y")
+        data = "";
+        board[x][y] = "x";
+        for (let i = 0 ; i < 5 ; i++) {
+            data += "<br>"
+            for (let j = 0 ; j < 5 ; j++){
+                data += board[i][j] + "&nbsp;&nbsp;&nbsp;&nbsp"
+            }
+        }
+        a.innerHTML = data;
+    }
 </script>
 </body>
 </html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let user = prompt(".")
+    let a = user.toLocaleUpperCase()
+    let b = user.toLocaleLowerCase()
+    let result = [];
+    for (let i = 0; i < user.length ; i++) {
+        if (a.indexOf(user) !== -1){
+            result.push(user[i].toLocaleLowerCase())
+        } else if (b.indexOf(user) !== -1) {
+            result.push(user[i].toLocaleUpperCase())
+        } else {
+            result.push(user[i])
+        }
+    }
+    alert(result.join(' '))
+</script>
+</body>
+</html>
