@@ -9,18 +9,17 @@
     let user = prompt("input")
     let en = ["Hello","Bye","Fine"]
     let vn = ["Chao","Tam biet","On"]
-    let index = 0
-    while (user < index) {
-        if (user === en[index]){
-            alert(vn[index])
+    for (let i = 0 ; i < user.length ; i++) {
+        if (user === en[i]){
+            alert(vn[i])
             break;
-        } else if (user === vn[index]){
-            alert(en[index])
+        } else if (user === vn[i]){
+            alert(en[i])
             break;
         } else {
             alert("Error!!")
+            break;
         }
-        index++
     }
 </script>
 </body>
