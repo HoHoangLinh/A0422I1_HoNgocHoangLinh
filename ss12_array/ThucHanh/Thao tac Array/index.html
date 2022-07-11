@@ -9,22 +9,25 @@
     <input type="number" id="num">
     <button onclick="Add()">Add</button>
     <button onclick="Display()">Display</button>
-<hr>
 <p id="text"></p>
 
 
 <script>
-    function Add() {
-        let arr = Array()
-        let x = 0
-        arr[x] = document.getElementById('num').value;
-        arr = arr.unshift(user);
-        alert(arr)
-    }
+     let arr = [];
+     let x = 0;
+     function Add() {
+         arr[x] = document.getElementById('num').value;
+         alert("Element " + arr[x] + " - Vi Tri : " + x);
+         x++
+     }
 
-    function Display() {
-
-    }
+     function Display() {
+         let a = ""
+         for (let i = 0 ; i < arr.length ; i++) {
+             a += "Element " + i + " = " + arr[i] + "<br>"
+         }
+         document.getElementById('text').innerHTML = a;
+     }
 </script>
 </body>
 </html>
