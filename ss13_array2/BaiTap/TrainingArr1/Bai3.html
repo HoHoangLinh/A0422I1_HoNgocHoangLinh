@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = [1,5,2,10,28,89,55,21,9,27];
+    let max = 0;
+    let sum = 0;
+    let index = 1;
+    let kq;
+    for (let i = 0 ; i < arr.length ; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+            sum = sum + max
+            kq ="Max : " + max + "<br>" + "Tong : " + sum/index + "<br>" + "Vi Tri : " + index
+            index++
+        }
+    }
+    document.writeln(kq)
+</script>
+</body>
+</html>
