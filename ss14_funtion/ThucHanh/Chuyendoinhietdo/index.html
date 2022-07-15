@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>F : <input type="number" id="text" oninput="Data(this.value)" onchange="Data(this.value)"></p>
+<p>C : <span id="result"></span> </p>
+<script>
+    function Data(text) {
+        F = parseFloat(text)
+        document.getElementById('result').innerHTML = (F - 32)/1.8
+    }
+</script>
+</body>
+</html>
