@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function MyFunction(x) {
+        let a = arguments[0]
+        if (typeof a === "number") {
+            return false
+        }
+        return true
+    }
+    let user = +prompt("Nhâp number or string?")
+    alert(MyFunction(user))
+</script>
+</body>
+</html>

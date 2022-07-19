@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function myFunction(x,y) {
+        let first = arguments[0]
+        let second = arguments[1]
+        let sum = first + second
+        if (first > second) {
+            alert(first + " Lớn hơn " + second)
+        } else {
+            alert(sum)
+        }
+    }
+    let a = +prompt("Nhap So A")
+    let b = +prompt("Nhap So B")
+    myFunction(a,b)
+</script>
+</body>
+</html>
