@@ -8,12 +8,12 @@
 <script>
     function MyFunction(x) {
         let a = arguments[0]
-        if (typeof a === "number") {
-            return false
+        if (isNaN(a)) {
+            return false;
         }
-        return true
+        return true;
     }
-    let user = +prompt("Nhâp number or string?")
+    let user = prompt("Nhâp number or string?")
     alert(MyFunction(user))
 </script>
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+function f(x) {
+    let arr = []
+    for (let i = 0 ; i < x ; i++) {
+        let array = prompt("Nhap ky tu trong mang?")
+        arr.push(array)
+    }
+    let user = prompt("Kiem Ky tu?")
+    let pois = 0
+    for (let i = 0 ; i < arr.length ; i++) {
+        if (user === arr[i]) {
+            return arr[i] + "\n" + "Pois : " + i
+        }
+        return -1
+    }
+}
+alert(f(5))
+</script>
+
+</body>
+</html>
