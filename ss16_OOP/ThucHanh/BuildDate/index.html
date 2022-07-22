@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mydate {
+        constructor(Day,Month,Year) {
+            this.Day = Day;
+            this.Month = Month;
+            this.Year = Year;
+        }
+        getDay() {
+            return this.Day;
+        }
+        getMonth() {
+            return this.Month;
+        }
+        getYear() {
+            return this.Year;
+        }
+    }
+    let date1 = new Mydate (20,1,2002)
+    let date2 = new Mydate (14,10,2003)
+    let date3 = new Mydate (16,10,2002)
+    let date = [date1,date2,date3];
+        alert("Day : " + date[2].getDay() + "\n" + "month : " + date[2].getMonth() + "\n" + "year : " + date[2].getYear());
+</script>
+</body>
+</html>

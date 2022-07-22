@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Cir {
+        constructor(radius) {
+            this.radius = radius;
+        }
+        getRadius(){
+            return this.radius;
+        }
+        getArea(){
+            return Math.PI * this.radius * this.radius;
+        }
+    }
+    let cis = new Cir(2)
+    let rad = cis.getRadius()
+    let area = cis.getArea()
+    alert(rad + "\n" + area)
+</script>
+</body>
+</html>
