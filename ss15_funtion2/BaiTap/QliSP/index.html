@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Add New Product</h3>
+<input type="text" style="height: 30px;width: 40%" id="product" >
+<input type="button" value="Add" style="width: 70px;height: 40px" onclick="Add()" >
+
+<h2>Display All Product</h2>
+<p id="result"></p>
+
+<script>
+    class Product {
+        constructor(name) {
+            this.name = name;
+        }
+        getName() {
+            return this.name
+        }
+    }
+let sony = new Product("Sony Xperia")
+let samsung = new Product("SamSung Galaxy")
+let nokia6 = new Product("Nokia 6")
+let arr = [sony,samsung,nokia6]
+    console.log(arr)
+    
+    function display(arr) {
+        let str = "<table>\n" +
+            "<tr>\n" +
+                "<th colspan='2' style='text-align: left'>Product Name</th>\n" +
+                "<th>"+ arr.length +" San Pham</th>\n" +
+            "</tr>"
+
+        for (let i = 0; i < arr.length; i++) {
+            str += "<tr>" +
+                "<td width='70%'>" +
+                    arr[i].getName() +
+                "</td>" +
+                "<td>" +
+                "<input type='button' style='width: 70px;height: 40px' value='Edit' onclick='edit("+i+")'>" +
+                "<input type='button' style='width: 70px;height: 40px' value='Delete' onclick='remove("+i+")'>" +
+                "</td>" +
+                "</tr>"
+        }
+        str += "</table>"
+        document.getElementById("result").innerHTML = str;
+    }
+    display(arr)
+
+    function Add() {
+        let ProductName = document.getElementById("product").value;
+        let newProduct = new Product(ProductName)
+        arr.push(newProduct)
+        alert("Da Add thanh cong");
+        display(arr)
+    }
+
+    function remove() {
+        let cf = confirm("Ban chac chan xoa Product nay`?")
+        if (cf){
+            arr.splice(0, 1);
+            alert("Da Remove Thanh Cong")
+        }
+        display(arr)
+    }
+
+    function edit(value) {
+        let NameProduct = prompt("Edit Name Product?")
+        let newProduct = new Product(NameProduct)
+        arr[value] = newProduct
+        alert("Da Edit Thanh Cong")
+        display(arr)
+    }
+</script>
+</body>
+</html>
