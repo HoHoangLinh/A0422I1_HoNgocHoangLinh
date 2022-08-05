@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Temperature{
+        constructor(C) {
+            this.C = C;
+            this.F = 1.8 * this.C +32;
+            this.K = this.C + 273.15;
+        }
+        getC(){
+            return this.C;
+        }
+        getF(){
+            return this.F;
+        }
+        getK(){
+            return this.K;
+        }
+    }
+    let Change = new Temperature(25);
+    alert("Do C -> F la : " + Change.getF() + "\n" + "Do C -> K : " + Change.getK() + "\n" + "Do C :" + Change.getC());;
+
+</script>
+</body>
+</html>
