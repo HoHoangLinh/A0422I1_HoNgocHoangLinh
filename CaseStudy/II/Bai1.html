@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Luong = +prompt("Nhap so luong nhan vien?")
+    let thue = 0;
+    let result;
+    if (Luong >= 15000000){
+        thue = 15;
+        result = Luong / thue;
+    } else if (Luong >= 7000000){
+        thue = 10;
+        result = Luong / thue;
+    } else {
+        thue = 5;
+        result = Luong / thue
+    }
+    alert(result);
+</script>
+</body>
+</html>

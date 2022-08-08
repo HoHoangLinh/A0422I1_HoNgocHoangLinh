@@ -6,13 +6,16 @@
 </head>
 <body>
 <script>
-    for (let chieucao = 1; chieucao <= 5 ; chieucao++) {
-        for (let chieurong = 1; chieurong <= 4 ; chieurong++) {
-            if (chieucao == 1 || chieucao == 5){
+    for (let i = 1; i <= 5 ; i++) {
+        for (let k = 5; k > i ; k--) {
+            document.write("&nbsp&nbsp")
+        }
+        for (let j = 0; j < i * 2 - 1 ; j++) {
+            if (i == 1 || i == 5) {
                 document.write("*")
-            } else if (chieurong == 1 || chieurong == 4) {
+            } else if (j == i * 2 -2 || j == 1) {
                 document.write("*")
-            }else {
+            } else {
                 document.write("&nbsp&nbsp")
             }
         }

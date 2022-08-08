@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr1 = [18,92,5];
+    let arr2 = [9,5,5];
+    let arr3 = [];
+    for (let i = 0; i < arr1.length ; i++) {
+        arr3[i] = arr1[i] / arr2[i]
+        arr3.push(arr3);
+    }
+    let max = arr3[0]
+    for (let j = 0; j < arr3.length ; j++) {
+        if (max < arr3[j]) {
+            max = arr3[j]
+        }else if (max < arr3[j]) {
+            max = arr3[j]
+        }
+    }
+    alert(arr3 + "\n" + "Max : " + max)
+</script>
+</body>
+</html>

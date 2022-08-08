@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1px">
+    <tr>
+        <th style="text-align: center" colspan="3">THỰC ĐƠN</th>
+    </tr>
+    <tr>
+        <td>1. Coffee</td>
+        <td>2. Cam vắt</td>
+        <td>3. Nước ép cà rốt</td>
+    </tr>
+    <tr>
+        <td>4. Nước ép cà chua</td>
+        <td>5. Nước lọc</td>
+        <td>6. Nước dừa</td>
+    </tr>
+    <tr>
+        <td colspan="3">7. Thoát gọi món</td>
+    </tr>
+</table>
+<button onclick="mon()">Đặt món</button>
+
+<script>
+function mon() {
+    let arr = ["Coffee","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
+    let result = []
+    do{
+        let user = prompt("Nhập số món?")
+        result.push(arr[user])
+    }while (user < 7)
+    console.log(result)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let lenght = prompt("Nhap lenght mang?")
+    let arr1 = []
+    let arr2 = [];
+    let result = 0;
+    for (let j = 0; j < lenght ; j++) {
+        let user = +prompt("Nhap trong mang?")
+        arr1.push(user)
+    }
+    for (let i = 0; i < arr1.length ; i++) {
+        arr2[i] = result + arr1[i]
+        result = arr2[i]
+        arr2.push(arr2)
+    }
+    alert(arr2)
+</script>
+</body>
+</html>
