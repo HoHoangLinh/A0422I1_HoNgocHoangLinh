@@ -27,13 +27,22 @@
 
 <script>
 function mon() {
-    let arr = ["Coffee","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
-    let result = []
+    let arr = ["0","Coffee","Cam vắt","Nước ép cà rốt","Nước ép cà chua","Nước lọc","Nước dừa"];
+    let arr2 = [0,15000,30000,15000,20000,10000,40000];
+    let a = 0;
+    let user = +prompt("Nhập số món?")
+    let soluong = +prompt("Nhập số lượng muốn mua?")
     do{
-        let user = prompt("Nhập số món?")
-        result.push(arr[user])
-    }while (user < 7)
-    console.log(result)
+        for (let i = 0; i < soluong ; i++) {
+            a += arr2[user]
+        }
+    }while (user === 7)
+    let cf = confirm("bạn có muốn dùng " + soluong + " " + arr[user] + " với giá " + a + " không ?");
+    if (cf){
+        alert("Bạn đã thanh toán thành công!")
+    } else {
+        alert("Bạn chưa thanh toán")
+    }
 }
 </script>
 </body>

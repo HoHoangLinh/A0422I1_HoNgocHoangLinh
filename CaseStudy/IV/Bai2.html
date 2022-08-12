@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = "acbca"
+    let value = []
+    let index = 0;
+    for (let i = 0; i < str.length ; i++) {
+        if (str.indexOf(value[i]) === -1 && value.indexOf(str[i]) === -1 ){
+            value.push(str[i])
+            index++
+        }
+    }
+    alert("Có "+ index + " kí tự khác nhau là : " + value);
+</script>
+</body>
+</html>
