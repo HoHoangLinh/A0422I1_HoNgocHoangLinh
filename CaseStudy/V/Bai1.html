@@ -6,17 +6,34 @@
 </head>
 <body>
 <script>
+function MaTran(x,y) {
     let a = [];
     let b = [];
-    let m = +prompt("Nhập cột?");
-    let n = +prompt("Nhập hàng");
     let result = 0;
-    for (let i = 0; i < m ; i++) {
-        for (let j = 0; j < n ; j++) {
-            result += a[i][j]
+    let ab = 0;
+    for (let i = 1; i <= x; i++) {
+        a.push(i)
+    }
+    for (let i = 1; i <= y ; i++) {
+        b.push(i)
+    }
+    for (let j = 0; j < a.length; j++) {
+        for (let x = 0; x < b.length ; x++) {
+            result += a[j]*b[x];
             document.writeln(result)
+            if (result % 2 === 0) {
+                ab += result
+
+            }
         }
     }
+    alert(ab)
+}
+
+    let m = +prompt("Nhập cột?");
+    let n = +prompt("Nhập hàng");
+    MaTran(m,n)
+
 </script>
 </body>
 </html>
