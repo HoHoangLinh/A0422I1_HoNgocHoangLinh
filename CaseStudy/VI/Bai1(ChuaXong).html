@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="display"></p>
+<input type="button" onclick="buy()" value="Mua vé Vietlot">
+<input type="button" onclick="ketqua()" value="Xem kết quả">
+
+<script>
+    class Vietlot{
+        constructor(Name , num1 , num2 , num3 , num4) {
+            this.Name = Name;
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+            this.num4 = num4;
+
+        }
+        getName(){
+            return this.Name;
+        }
+        getNum1(){
+            return this.num1;
+        }
+        getNum2(){
+            return this.num2;
+        }
+        getNum3(){
+            return this.num3;
+        }
+        getNum4(){
+            return this.num4;
+        }
+    }
+    let userlist = []
+    let user1 = new Vietlot("Hùng",24,61,23,52);
+    userlist.push(user1);
+    console.log(userlist)
+
+    function buy() {
+        let newuser = prompt("Bạn tên là gì");
+        let a = +prompt("Bạn có 2 lựa chọn : " + "\n" + "1. Bạn tự nhập số tự chọn" + "\n" + "2. Random")
+        let arr = []
+        if (a === 1) {
+            for (let i = 1; i <= 4; i++) {
+                let b = +prompt("Nhập vé số " + i);
+                arr.push(b)
+            }
+        } else if (a === 2) {
+            for (let i = 0; i < 4 ; i++) {
+                let c = Math.floor(Math.random() * (99 - 1) + 2);
+                arr.push(c);
+            }
+        } else {
+            alert("Không hợp lệ");
+        }
+
+        let newa = new Vietlot(newuser ,arr[0],arr[1],arr[2],arr[3]);
+        userlist.push(newa)
+    }
+
+    function ketqua() {
+        let str = "<table border=\"1px\">\n" +
+            "    <tr>\n" +
+            "        <th colspan=\"3\">VIETLOT</th>\n" +
+            "    </tr>\n"
+        for (let i = 0; i < 6; i++) {
+            let random = Math.floor(Math.random() * (99 -1) + 2);
+            str += "<tr>\n" +
+                "        <td><input type=\"number\" value=\"" + random + "\"></td>\n" +
+                "    </tr>"
+        }
+        str += "</table>"
+        document.getElementById("display").innerHTML = str
+    }
+
+</script>
+</body>
+</html>

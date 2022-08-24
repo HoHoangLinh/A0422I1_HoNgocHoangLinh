@@ -16,24 +16,25 @@
         }
     }
 
-
     function SNT(x) {
         let index = 0
         let number = 2
-        while (index < 10) {
             let flag = true;
-            for (let i = 2; i < number ; i++) {
-                if (number % i === 0) {
+        if (x <= 1){
+            alert(x + " khong phai la so nguyen to")
+        } else
+            for (let i = 2; i < x ; i++) {
+                if (x % i === 0) {
                     flag = false;
                 }
             }
             if (flag){
-                document.writeln(number)
+                alert(number + " La so nguyen to")
                 index++
             }
-            number++
         }
-    }
+
+    SNT(5)
 </script>
 </body>
 </html>
